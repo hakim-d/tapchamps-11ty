@@ -6,9 +6,17 @@ TapChamps website is templated using [Eleventy](https://www.11ty.dev/)
 
 <img width="200" alt="Screenshot 2024-02-06 at 12 16 18" src="https://github.com/hakim-d/tapchamps-11ty/assets/7389034/5d6a8e73-0582-44c6-9590-89409a5efee1">
 
+<br/>
+<br/>
+
 > [TapChamps](https://play.google.com/store/apps/details?id=com.tapchamps.tap) is an app that allows you to play games and earn rewards. You can choose from a variety of games in different genres, such as casual, board, puzzle, trivia, and more. You can also participate in tournaments and compete with other players. The more you play, the more diamonds you can collect. Diamonds are the virtual currency that you can use to redeem prizes, such as gift cards from Amazon, Visa, PayPal, and other providers.
 
+<br/>
+
 <img src="https://github.com/hakim-d/tapchamps-11ty/assets/7389034/93bbcd58-162c-4c66-be6d-a6a35c0cdb02" width="300">
+
+<br/>
+<br/>
 
 **Install**
 
