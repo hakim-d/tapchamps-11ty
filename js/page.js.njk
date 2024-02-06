@@ -1,0 +1,237 @@
+---
+permalink: ./js/page.js
+---
+window.addEventListener('load', () => {
+    anime({
+        targets: '.panel, .navigation',
+        opacity: [0,1],
+    });
+    anime({
+        targets: '.loading-bg',
+        opacity: [.25,0],
+        width: ['75%', '0%']
+    });
+    anime.timeline()
+    .add({
+        targets: '.mobile-app',
+        scale: [.5, 1],
+        rotateZ: [-10, 0],
+        opacity: [0,1],
+        translateX: [-200,0],
+        duration: 1200,
+    })
+    .add({
+        targets: '.gift-cards div img',
+        scale: [0,1],
+        translateX: [-100,0],
+        opacity: [0,1],
+        duration: 600,
+        delay: (el, i) => 300 + 60 * i
+    }, -100)
+    .add({
+        targets: '.tagline',
+        translateY: [50,0],
+        opacity: [0,1],
+        duration: 600,
+    }, 200)
+    .add({
+        targets: '.play-store-button',
+        translateY: [-50,0],
+        opacity: [0,1],
+        duration: 600,
+    }, 200)
+    .add({
+        targets: '.panel',
+        opacity: [0,1],
+        scaleX: [.5,1],
+        duration: 2000,
+    }, -100);
+
+    anime({
+        targets: '.mascot',
+        scaleX: [1,1.1],
+        scaleY: [1,1.09],
+        easing: 'easeInOutSine',
+        direction: "alternate",
+        duration: 2000,
+        loop:true,
+    });
+
+    anime.timeline()
+    .add({
+        targets: '.logo',
+        translateY: [-50,0],
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 500,
+    }, 200)
+    .add({
+        targets: '.navigation ul',
+        translateY: [-50,0],
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 500,
+    }, 300)
+
+    if (window.subPageAnime) {
+        anime.remove(".play-store-button");
+        anime.remove(".mascot");
+        anime({
+            targets: '.play-store-button',
+            opacity: [0.9,1],
+            scaleX: [1,1.2],
+            scaleY: [1,1.2],
+            easing: 'easeInOutSine',
+            direction: "alternate",
+            duration: 1000,
+            loop: true,
+        });
+        anime.timeline()
+        .add({
+            targets: '.gradient-bg',
+            opacity: [0.9,1],
+            scaleX: [.9,1.1],
+            scaleY: [.9,1.1],
+            rotateZ: [45,45],
+            duration: 500,
+        }).add({
+            targets: '.mascot',
+            translateX: [-100,0],
+            opacity: [0,1],
+            duration: 500,
+        },.01);
+    }
+
+    {# document.querySelector('.panel') &&
+    (document.querySelector('.panel').onmouseover = function(){
+        headerAnim.play();
+    }) #}
+
+});
+// 📊 Charts data
+document.addEventListener('alpine:init', () => {
+    const gamesData = {
+        bubbleShooterPop: {
+            name: "Bubble Shooter Pop!",
+            october: [48.96, 47.03, 24.00, 25.00, 43.00],
+            november: [42.00, 44.10, 24.00, 24.30, 47.20],
+            december: [43.87, 45.60, 24.00, 25.30, 42.10],
+            logo: '{% image "./assets/case-game-bubble-shooter-pop.webp", "TapChamps | Bubble Shooter Pop", [50*2], ['webp'], 'false', 'no-select' %}',
+            advertiser: 'Mobilityware LLC',
+            category:   'puzzle',
+        },
+        mgmSlotsLive: {
+            name: "MGM Slots Live",
+            october:       [53.60, 49.30, 20.20, 5.50, 9.60],
+            november:     [57.30, 55.30, 25.40, 6.40, 10.30],
+            december:  [44.70, 48.20, 25.00, 5.80, 10.20],
+            logo:       '{% image "./assets/case-game-mgm-slots-live.webp", "TapChamps | MGM Slots Live", [50*2], ['webp'], 'false', 'no-select' %}',
+            advertiser: 'Playstudios',
+            category:   'casino',
+        },
+        bingoBlitz: {
+            name: "Bingo Blitz",
+            october:       [44.50, 55.30, 33.60, 5.10, 10.10],
+            november:     [47.30, 50.30, 26.60, 6.30, 11.20],
+            december:  [46.20, 52.30, 25.40, 5.90, 10.10],
+            logo:       '{% image "./assets/case-game-bingo-blitz.webp", "TapChamps | Bingo Blitz™️ - Bingo Games", [50*2], ['webp'], 'false', 'no-select' %}',
+            advertiser: 'Playtika',
+            category:   'casino',
+        },
+        dominoes: {
+            name: "Dominoes",
+            october:       [50.60, 53.50, 28.70, 22.30, 43.20],
+            november:     [52.30, 54.20, 32.40, 24.30, 45.30],
+            december:  [51.60, 54.20, 33.20, 25.60, 43.60],
+            logo:       '{% image "./assets/case-game-dominoes.webp", "TapChamps | Dominoes", [50*2], ['webp'], 'false', 'no-select' %}',
+            advertiser: 'SAS Loop games',
+            category:   'board',
+        },
+        ginRummy: {
+            name: "Gin Rummy",
+            october:       [40.40, 46.80, 24.60, 17.70, 30.20],
+            november:     [43.20, 47.50, 25.30, 18.30, 32.10],
+            december:  [40.70, 45.00, 23.40, 22.10, 33.20],
+            logo:       '{% image "./assets/case-game-gin-rummy.webp", "TapChamps | Gin Rummy", [50*2], ['webp'], 'false', 'no-select' %}',
+            advertiser: 'Blackout Lab',
+            category:   'card',
+        },
+        bingoBash: {
+            name: "Bingo Bash",
+            october:       [47.30, 47.20, 22.30, 23.30, 44.20],
+            november:     [53.20, 47.80, 25.20, 25.30, 46.10],
+            december:  [51.60, 45.60, 23.30, 25.30, 44.20],
+            logo:       '{% image "./assets/case-game-bingo-bash.webp", "TapChamps | Bingo Bash", [50*2], ['webp'], 'false', 'no-select' %}',
+            advertiser: 'GSN games',
+            category:   'board',
+        },
+        tripleTile: {
+            name: "Triple Tile: Match Puzzle Game",
+            october:       [40.20, 49.20, 26.50, 26.00, 48.00],
+            november:     [41.20, 51.30, 30.10, 28.00, 42.00],
+            december:  [40.10, 45.30, 20.00, 24.60, 39.00],
+            logo:       '{% image "./assets/case-game-triple-tile.webp", "TapChamps | Triple Tile: Match Puzzle Game", [50*2], ['webp'], 'false', 'no-select' %}',
+            advertiser: 'Tripledot Studios Limited',
+            category:   'Casual',
+        },
+    };
+    Alpine.data("gameData", (game) => ({
+        ...gamesData[game],
+        labels: ['', 'D1', 'D7', 'D7', 'D30'],
+        init() {
+            let chart = new ApexCharts(this.$refs[game], this.options);
+            chart.render();
+            {# this.$watch('values', () => { chart.updateOptions(this.options); }); #}
+        },
+        get options() {
+            return {
+                chart: { type:'bar', stacked: true,toolbar: {show: false},},
+                xaxis: {
+                    {# categories:this.labels,group:{style:{fontSize:'16px',fontWeight:900},groups:[{title:'CR',cols:1},{title:'RR',cols:2}]} #}
+                    categories:this.labels,group:{style:{fontSize:'16px',fontWeight:900},groups:[{title:'CR',cols:1},{title:'RR',cols:2},{title:'ROAS',cols:2, bgColor: '#4E7DFF'}]}
+                },
+                grid: {show: false,},
+                dataLabels: {
+                    formatter: function (val, opts) {return val + ' %'},
+                },
+                legend: {position:'bottom',horizontalAlign:'center',},
+                yaxis: {show: false, labels:{formatter:function(val){return val + "%"}}},
+                colors: ['#03237E', '#4E7DFF', '#FFA500'],
+                series: [
+                    { name: 'October', data: this.october, },
+                    { name: 'November', data: this.november, },
+                    { name: 'December', data: this.december, },
+                ],
+            }
+        },
+    }));
+    Alpine.data("submitHandle", () => ({
+        response: '',
+        selectedOption: null,
+        async send() {
+            this.response = '';
+            if (!this.selectedOption) {this.response = 'Please select Business or Support!';return;};
+            this.$refs.submit.setAttribute('disabled', true);
+            await fetch('contact/', {
+                method: 'POST',
+                body: JSON.stringify({
+                    option: this.selectedOption,
+                    name: this.$refs.name.value,
+                    email: this.$refs.email.value,
+                    company: this.$refs.company.value,
+                    website: this.$refs.website.value,
+                    message: this.$refs.message.value
+                }),
+                headers: {'Content-type': 'application/json; charset=UTF-8',},
+            })
+            .then((res) => res.json())
+            .then((data) => {
+                this.response = data.message;
+                this.$refs.submit.removeAttribute('disabled');
+                if (data.type == 'success') {this.$refs.contact_form.reset();}
+            })
+        },
+    }));
+    Alpine.data('contactOptions', () => ({ value: null, select(option) { this.value = option }, isSelected(option) { return this.value === option }, hasRovingTabindex(option, el) { if (this.value === null && Array.from(el.parentElement.children).indexOf(el) === 0) return true; return this.isSelected(option); }, selectNext(e) { let el = e.target; let siblings = Array.from(el.parentElement.children); let index = siblings.indexOf(el); let next = siblings[index === siblings.length - 1 ? 0 : index + 1]; next.click(); next.focus(); }, selectPrevious(e) { let el = e.target; let siblings = Array.from(el.parentElement.children); let index = siblings.indexOf(el); let previous = siblings[index === 0 ? siblings.length - 1 : index - 1]; previous.click(); previous.focus(); }, }))
+    Alpine.bind('optionHandler', (thing) => ({ ['x-data']() { return { option: thing } }, ['@click']() { return this.select(this.option) }, ['@keydown.enter.stop.prevent']() { return this.select(this.option) }, ['@keydown.space.stop.prevent']() { return this.select(this.option) }, [':aria-checked']() { return this.isSelected(this.option) }, [':tabindex']() { return this.hasRovingTabindex(this.option, this.$el) ? 0 : -1 }, [':aria-labelledby']() { return this.$id('radio-option-label') }, [':aria-describedby']() { return this.$id('radio-option-description') }, ['x-id']() { return ['radio-option-label', 'radio-option-description'] }, }))
+})

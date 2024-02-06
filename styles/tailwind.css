@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap'); */
+@import url("https://use.typekit.net/mos7wwn.css");
+
+input::placeholder, textarea::placeholder {
+    @apply text-light-blue opacity-50;
+}
+
+html { @apply scroll-smooth; }
+
+body {
+    @apply antialiased text-blue dark:text-beige bg-white dark:bg-bluer overflow-x-hidden;
+}
+.no-select { user-select: none; }
+.section {
+    @apply flex flex-col px-4 sm:px-6 md:px-8 max-w-screen-xl m-auto min-h-screen;
+}
+.navigation {
+    @apply relative pt-6 lg:pt-8 flex items-center justify-center lg:justify-between text-blue font-semibold text-sm leading-6 dark:text-beige flex-col lg:flex-row gap-5 lg:gap-0;
+}
+.navigation ul {
+    @apply flex items-center gap-6;
+}
+.navigation ul li {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.navigation ul li a {
+    text-decoration: underline;
+}
+.logo {
+    @apply w-[200px] md:w-[250px] h-[60px] md:h-[102px];
+}
+.panel {
+    @apply relative my-auto;
+}
+.curvy-bg {
+    user-select: none;
+    z-index: -1;
+    @apply h-full;
+}
+.panel-content {
+    @apply relative md:absolute w-full h-full left-0 top-0 flex items-center;
+}
+.panel-content > div {
+    @apply
+        justify-around
+        flex
+        w-full
+        flex-col md:flex-row
+        p-10 md:p-0
+        gap-5 md:gap-0
+        rounded-3xl md:rounded-none
+        bg-gradient-to-b md:bg-none
+        from-blue
+        to-light-blue
+        dark:from-beiger
+        dark:to-beige;
+}
+.panel-text {
+    @apply flex flex-col self-center text-center md:text-left md:pl-24 xl:pl-32;
+}
+.tagline {
+    @apply font-black text-white dark:text-bluer uppercase text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl;
+}
+.gift-cards {
+    @apply absolute z-0 translate-x-[100%];
+}
+.gift-cards div {
+    position: relative;
+}
+.mascot {
+    transform-origin: 50% 100%;
+}
+.loading-bg {
+    transform-origin: 50% 50%;
+}
+section {
+    @apply flex items-center px-4 sm:px-6 md:px-8 max-w-screen-xl m-auto my-32;
+}
+h2 {
+    @apply font-bold uppercase text-3xl md:text-4xl m-0;
+}
+p {
+    @apply mb-2;
+}
+h3 {
+    @apply font-bold text-xl sm:text-2xl mb-5;
+}
+.testimonials {
+    @apply flex flex-row;
+}
+.testimonial {
+    @apply flex text-white dark:text-bluer h-auto;
+}
+.testimonial > div {
+    @apply flex flex-col;
+}
+.testimonial-box {
+    @apply flex flex-col bg-gradient-to-b from-blue to-light-blue dark:from-beiger dark:to-beige rounded-3xl pl-3 pr-5 pt-10 pb-5 -mt-8 flex-grow shrink-0 basis-auto relative;
+}
+.testimonial-text {
+    @apply m-auto;
+}
+.testimonial-box h3 {
+    @apply text-center;
+}
+.testimonial-box > p {
+    @apply mt-5;
+}
+.quote-icon {
+    @apply w-7 h-7;
+}
+.swiper {
+    @apply mt-24;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+    @apply text-beige dark:text-white drop-shadow-md;
+}
+.chart-slide {
+    @apply mx-auto lg:mx-32 border-2 border-beige rounded-xl shadow-lg;
+}
+.slide-title {
+    @apply flex absolute z-10 right-1 top-1 md:right-4 md:top-4 gap-5 text-sm origin-top-right scale-75 md:scale-100;
+}
+.apexcharts-grid line {
+    @apply stroke-[#fff1d6] dark:stroke-orange;
+}
+.footer-wrapper {
+    @apply flex bg-beige dark:bg-bluer dark:text-beige min-h-screen z-10 relative;
+}
+footer {
+    @apply flex px-4 sm:px-6 md:px-8 max-w-screen-xl m-auto gap-y-20 py-10 flex-col md:flex-row;
+}
+.text-input {
+    @apply rounded-md border border-light-blue dark:border-0 dark:bg-beige dark:text-bluer placeholder:text-bluer px-3 py-2.5;
+}
+footer a {
+    text-decoration: underline;
+}
+.btn {
+    @apply mt-6 rounded-md bg-gradient-to-b from-light-blue to-blue text-beige px-4 py-2.5 uppercase font-bold text-2xl shadow-lg  hover:from-blue hover:to-bluer hover:shadow-xl transition-transform hover:scale-95 active:scale-100;
+}
+button.btn:disabled {
+    opacity: .3;
+    @apply hover:scale-100
+}
+.slide-icon-color-spill {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    filter: blur(5px) brightness(.9);
+    scale: 1.1;
+    z-index: -1;
+}
+.bg-slide {
+    @apply w-full h-full absolute rounded-md overflow-hidden left-0 top-0;
+}
+.bg-slide-radial {
+    background: radial-gradient(ellipse at top right, #ffffff00 0%, #ffffff 50%, #ffffff 100%);
+    @apply text-blue text-opacity-5 font-black text-[4rem] text-left uppercase pl-10 whitespace-nowrap;
+}
+.bg-slide img {
+    @apply w-full h-full object-cover blur-lg brightness-150;
+}

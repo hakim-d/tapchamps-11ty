@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      {% block title %}{% endblock %}
+    </title>
+    <meta name="description" content="{{description}}"/>
+    {# {%- block head -%}{%- endblock -%} #}
+    <meta name="author" content="TapChamps">
+    <meta name="keywords" content="Reward Gaming App, Game Advertising, Tapchamps">
+    <meta name="theme-color" content="#03237E">
+    <meta name="msapplication-navbutton-color" content="#03237E">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#03237E">
+    <meta name='og:image' content='{% image "assets/ogg.png", "", [1280], ["webp"], "false", "", true %}'>
+    <link rel="icon" type="image/png" sizes="56x56" href="{% image 'assets/icon.png', '', [56], ['webp'], 'false', '', true %}">
+    {# <meta name='og:image' content='/img/yREtGAwsEh-1280.webp'>
+    <link rel="icon" type="image/png" sizes="56x56" href="/img/-c_CdJqQc7-55.webp"> #}
+    <link rel="canonical" href="https://tapchamps.com/">
+    <link rel="apple-touch-icon" href="/img/mobile.png"/>
+    <link rel="stylesheet" href="/css/swiper.css?v={% version %}"/>
+    <link rel="stylesheet" href="/style.css?v={% version %}"/>
+    <script defer src="/js/anime.js?v={% version %}"></script>
+    <script defer src="/js/swiper.js?v={% version %}"></script>
+    {# <script defer src="/js/intersect.js?v={% version %}"></script> #}
+    <script defer src="/js/apexcharts.js?v={% version %}"></script>
+    <script defer src="/js/page.js?v={% version %}"></script>
+    <script defer src="/js/alpine.js?v={% version %}"></script>
+  </head>
+  <body>
+    {% if page.url == '/' %}
+      <div class="bg-[url(/img/tapchamps-logo.svg)] dark:bg-[url(/img/tapchamps-dark-logo.svg)] bg-no-repeat bg-center opacity-25 bg-contain absolute min-h-screen w-3/4 left-1/2 -translate-x-1/2 -z-50 loading-bg"></div>
+    {% endif %}
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+
+    {% include "footer.njk" %}
+
+    {# <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=bf3c6f56-02fb-4200-b893-0ac5c1d48fd8"></script> #}
+
+    {% block js %}
+      {{ content | safe }}
+    {% endblock %}
+
+  </body>
+</html>

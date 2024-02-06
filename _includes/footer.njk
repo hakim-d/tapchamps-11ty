@@ -1,0 +1,99 @@
+<div class="footer-wrapper">
+    <footer x-data="submitHandle">
+        <div class="flex flex-col flex-1 gap-10 md:gap-24 text-center sm:text-start justify-between">
+            <div>
+                <h2 class="mb-3">Join TapChamps!<br>Easy — No SDK Required!</h2>
+                <p class="mx-auto sm:mr-40">Just send us your tracking link, desired CPI, KPIs and let us take care of the rest!</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-10 items-center">
+                <div class="w-[90px]">
+                    {% image "./assets/tapchamps-logo-blue.svg", "tapchamps.com", [90*2], ['webp'], 'false', 'dark:hidden' %}
+                    {% image "./assets/tapchamps-logo-blue-dark.svg", "tapchamps.com", [90*2], ['webp'], 'false', 'hidden dark:block' %}
+                </div>
+                <div class="flex gap-5">
+                    <a href="https://www.facebook.com/tapchamps" aria-label="TapChamps facebook page">
+                        <svg class="h-8 w-auto" viewBox="0 0 27.843 27.73">
+                            <path id="facebook" d="M28.368,13.988A13.934,13.934,0,0,1,16.637,27.76V18h3.239l.621-4.042H16.624c0-.957-.018-1.876.005-2.794a1.879,1.879,0,0,1,1.564-1.927,15.554,15.554,0,0,1,2.454-.075V5.716c-2.913-.4-5.84-.691-7.511,1.833-1.08,1.63-.883,3.228-.883,6.427H8.722V18.01h3.519v9.739C4.109,26.761-2.791,17.195,2.228,7.17a13.96,13.96,0,0,1,26.14,6.818Z" transform="translate(-0.525 -0.03)" fill="currentColor"/>
+                        </svg>                          
+                    </a>
+                    <a href="https://www.instagram.com/Tapchamps" aria-label="TapChamps instagram page">
+                        <svg class="h-8 w-auto" viewBox="0 0 27.916 27.916">
+                            <path d="M133.949,121.948a3.213,3.213,0,0,0-2.727-1.324c-2.59-.036-5.18-.025-7.77,0a3.223,3.223,0,0,0-3.335,3.33c-.037,2.6-.03,5.2,0,7.8a3.249,3.249,0,0,0,3.418,3.339c2.841.119,5.228.09,7.63,0a3.237,3.237,0,0,0,3.408-3.379c.035-2.571.025-5.143,0-7.714a3.52,3.52,0,0,0-.627-2.047Zm-6.6,10.478a4.574,4.574,0,1,1,4.574-4.568A4.572,4.572,0,0,1,127.344,132.426Zm4.74-8.264a1.069,1.069,0,1,1,.051-2.136,1.069,1.069,0,0,1-.051,2.137Z" transform="translate(-113.386 -113.866)" fill="currentColor"/>
+                            <path d="M199.833,197.359a2.965,2.965,0,1,0,2.947,2.99A2.952,2.952,0,0,0,199.833,197.359Z" transform="translate(-185.858 -186.339)" fill="currentColor"/>
+                            <path d="M13.958,0A13.958,13.958,0,1,0,27.916,13.958,13.958,13.958,0,0,0,13.958,0Zm7.7,21.09c-1.343,1.609-3.162,1.8-5.281,1.8-6.328-.005-7.668.155-9.274-1.006-1.66-1.2-2.034-2.924-2.038-4.989-.013-6.82-.231-8.318,1.185-10.015,1.691-2.026,3.411-1.755,7.731-1.755,4.548,0,5.017-.236,6.483.687C22.35,7,22.843,8.82,22.848,11.132c.015,6.843.216,8.279-1.187,9.959Z" fill="currentColor"/>
+                        </svg>                                                  
+                    </a>
+                    <a href="https://twitter.com/Tapchampsapp" aria-label="TapChamps twitter page">
+                        <svg class="h-8 w-auto" viewBox="0 0 27.916 27.916">
+                            <path id="twitter" d="M13.958,0A13.958,13.958,0,1,0,27.916,13.958,13.958,13.958,0,0,0,13.958,0Zm7.035,11.053A10,10,0,0,1,5.876,19.8a.748.748,0,0,1-.19-.156,7.39,7.39,0,0,0,5.065-1.5,3.564,3.564,0,0,1-3.276-2.464H8.929l.022-.083a3.536,3.536,0,0,1-2.7-3.425l1.432.408.046-.077A3.609,3.609,0,0,1,6.714,7.821,10.136,10.136,0,0,0,14,11.524c-.023-.179-.047-.326-.06-.474a3.535,3.535,0,0,1,5.936-2.907c.248.233.194.173,2.342-.59-.058.424-.315.78-1.312,1.848L22.7,8.914c-1.09,1.644-1.711,1.361-1.706,2.139Z" fill="currentColor"/>
+                        </svg>                                                 
+                    </a>
+                </div>
+                <div class="w-[200px]">
+                    <a href="{{ settings.playStoreLink }}" target="_blank">
+                        {% image "./assets/play-store-btn.png", "TapChamps App play store button", [200*2], ['webp'], 'false', 'no-select' %}
+                    </a>
+                </div>
+            </div>
+            <div>
+                <p>TapChamps &copy; 2020 - <span x-text="new Date().getFullYear()"></span></p>
+                <a href="/terms" aria-label="TapChamps terms and conditions page">Terms &amp; Conditions</a> — <a href="/privacy" aria-label="TapChamps privacy policy page">Privacy Policy</a> — <a href="https://support.tapchamps.com/hc/en-us" aria-label="TapChamps Support">Support</a>
+            </div>
+        </div>
+        <form
+            class="flex flex-col flex-1 gap-y-5 pl-0 md:pl-5 lg:pl-44"
+            x-ref="contact_form"
+            x-on:submit.prevent="send()">
+            <div
+                x-data="contactOptions"
+                @keydown.down.stop.prevent="selectNext"
+                @keydown.right.stop.prevent="selectNext"
+                @keydown.up.stop.prevent="selectPrevious"
+                @keydown.left.stop.prevent="selectPrevious"
+                role="radiogroup"
+                aria-required="true"
+                class="text-blue"
+                x-effect="selectedOption = value"
+            >
+                <div class="space-x-2 flex">
+                    <div
+                        x-bind="optionHandler('business')"
+                        role="radio"
+                        class="flex flex-1 cursor-pointer rounded-md bg-white dark:bg-beige p-4 shadow"
+                    >
+                        <span
+                            :class="{ 'bg-blue': isSelected(option) }"
+                            class="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-white ring-1 ring-blue bg-white"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="ml-3">
+                            <p :id="$id('radio-option-label')" class="font-bold m-0">Business</p>
+                        </span>
+                    </div>
+                    <div
+                        x-bind="optionHandler('support')"
+                        role="radio"
+                        class="flex flex-1 cursor-pointer rounded-md bg-white dark:bg-beige p-4 shadow"
+                    >
+                        <span
+                            :class="{ 'bg-blue': isSelected(option) }"
+                            class="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-white ring-1 ring-blue bg-white"
+                            aria-hidden="true"
+                        ></span>
+                        <span class="ml-3">
+                            <p :id="$id('radio-option-label')" class="font-bold m-0">Support</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <input x-ref="name" name="name" type="text" placeholder="Name *" required class="text-input" />
+            <input x-ref="email" name="email" type="email" placeholder="Email *" type="text" required class="text-input" />
+            <input x-ref="company" name="company" type="company" placeholder="Company *" type="text" required class="text-input" />
+            <input x-ref="website" name="website" type="website" placeholder="Website *" type="text" required class="text-input" />
+            <textarea x-ref="message" name="message" placeholder="Message *" cols="30" rows="5" required class="text-input"></textarea>
+            <span class="text-center text-2xl mx-5" x-text="typeof(response) !== 'undefined' && response" x-show="typeof(response) !== 'undefined' && response!=''" x-transition></span>
+            <button x-ref="submit" type="submit" class="btn">Send</button>
+        </form>
+    </footer>
+</div>
+<span id="contact"></span>

@@ -1,0 +1,511 @@
+---
+description: "Tapchamps deep learning technology targets users based on their behavior and guarantees continuous app engagement through special rewarded experiences."
+---
+{% extends "_includes/default.njk" %}
+{% block title %}TapChamps | The Ultimate Gaming Arena{% endblock %}
+
+{% block content %}
+
+    <header>
+        <div class="section">
+            {% include "navigation.njk" %}
+            <div class="panel opacity-0" x-data="{}">
+                <img src="./img/header-bg.svg" width="1640" height="651" alt="svg curvy background" class="curvy-bg dark:hidden invisible md:visible absolute md:relative -top-full md:top-0"
+                draggable="false"/>
+                <img src="./img/header-dark-bg.svg" width="1640" height="651" alt="svg curvy background" class="curvy-bg hidden dark:block invisible md:visible absolute md:relative -top-full md:top-0"
+                draggable="false"/>
+                <div class="panel-content">
+                    <div>
+                        <div class="panel-text flex-1">
+                            <h1 class="tagline">The ultimate<br>gaming arena</h1>
+                            <div class="hidden md:block md:w-[240px] lg:w-[300px] mt-2 sm:mt-6 play-store-button">
+                                <a href="{{ settings.playStoreLink }}" target="_blank">
+                                    {% image "./assets/play-store-btn.png", "TapChamps App play store button", [300*2], ['webp'], 'false', 'no-select' %}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-1 flex justify-center items-center relative -translate-x-6 sm:-translate-x-6 md:-translate-x-20 lg:translate-x-0">
+                            <div class="gift-cards">
+                                <div class="w-[100px] sm:w-[100px] md:w-[140px] lg:w-[160px] translate-x-1 md:translate-x-0 translate-y-3 md:translate-y-8 z-20">
+                                    {% image "./assets/card-amazon.png", "TapChamps Gift Card Amazon", [160*2], ['webp'], 'false', 'no-select ' %}
+                                </div>
+                                <div class="w-[100px] sm:w-[100px] md:w-[140px] lg:w-[160px] translate-x-2 md:translate-x-4 z-10">
+                                    {% image "./assets/card-play-store.png", "TapChamps Gift Google Play Store", [160*2], ['webp'], 'false', 'no-select' %}
+                                </div>
+                                <div class="w-[100px] sm:w-[100px] md:w-[140px] lg:w-[160px] translate-x-1 -translate-y-4 md:-translate-y-10 z-0">
+                                    {% image "./assets/card-paypal.png", "TapChamps Gift Paypal", [160*2], ['webp'], 'false', 'no-select' %}
+                                </div>
+                            </div>
+                            <div class="hidden lg:block lg:w-[220px] -left-20 z-40 -bottom-0 absolute mascot">
+                                {% image "./assets/mascot.png", "TapChamps Mascot", [220*2], ['webp'], 'false', 'no-select' %}
+                            </div>
+                            <div class="w-[200px] md:w-[250px] lg:w-[300px] xl:w-[375px] relative">
+                                {% image "./assets/mobile-app.png", "TapChamps Mobile App", [375*2], ['webp'], 'false', 'no-select mobile-app' %}
+                            </div>
+                        </div>
+                        <div class="block md:hidden w-2/3 xs:w-2/4 mx-auto play-store-button">
+                            <a href="{{ settings.playStoreLink }}" target="_blank">
+                                {% image "./assets/play-store-btn.png", "TapChamps App play store button", [300*2], ['webp'], 'false', 'no-select' %}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-games hidden xs:hidden sm:hidden md:hidden lg:block">
+                    <div class="w-[80px] lg:w-[105px] absolute top-32 lg:-top-4 left-3/4 lg:left-1/2 translate-x-7">
+                        {% image "./assets/floating-game-1.png", "TapChamps floating game thumbnail", [105*2, 80*2], ['webp'], 'false', 'no-select' %}
+                    </div>
+                    <div class="w-[80px] lg:w-[105px] absolute top-1/2 -left-8 -translate-y-10">
+                        {% image "./assets/floating-game-2.png", "TapChamps floating game thumbnail", [105*2, 80*2], ['webp'], 'false', 'no-select' %}
+                    </div>
+                    <div class="w-[80px] lg:w-[105px] absolute -bottom-6 left-1/3">
+                        {% image "./assets/floating-game-3.png", "TapChamps floating game thumbnail", [105*2, 80*2], ['webp'], 'false', 'no-select' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <div class="mx-0 md:mx-16 lg:mx-36 xl:mx-72 text-center">
+                <h2 class="mb-5">Engaged Gamers Guaranteed!<br>TapChamps only!</h2>
+                <p class="text-lg">TapChamps deep learning technology targets users based on their behavior and guarantees continuous app engagement through special rewarded experiences.</p>
+            </div>
+            <div class="flex flex-col gap-12 mt-24">
+                <div class="flex flex-col gap-12 md:block lg:columns-2 lg:gap-y-12">
+                    <div class="flex flex-col md:flex-row text-center md:text-left">
+                        <div>
+                            <div class="w-[150px] m-auto mb-5 max-h-">
+                                {% image "./assets/icons/icon-users.png", "TapChamps | Direct clean traffic only", [150*2], ['webp'], 'false', 'no-select max-h-72 w-auto' %}
+                            </div>
+                        </div>
+                        <div class="md:pl-10">
+                            <h3>Direct clean traffic only</h3>
+                            <p>100% transparency.</p>
+                            <p>All the traffic we send comes from Tapchamps!</p>
+                            <p>Our users are constantly scanned using top notch anti-fraud tools.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row text-center md:text-left">
+                        <div>
+                            <div class="w-[150px] m-auto mb-5">
+                                {% image "./assets/icons/icon-good-users.png", "TapChamps | High quality users", [150*2], ['webp'], 'false', 'no-select max-h-72 w-auto' %}
+                            </div>
+                        </div>
+                        <div class="md:pl-10">
+                            <h3>High quality users</h3>
+                            <p>Our machine learning technology analyses users profiles to find the right users for you, and guarantees continuous app engagement.</p>
+                            <p>We can also recommend games to players based on their preferences and send them reminders.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-12 md:block lg:columns-2 lg:gap-y-12">
+                    <div class="flex flex-col md:flex-row text-center md:text-left">
+                        <div>
+                            <div class="w-[150px] m-auto mb-5">
+                                {% image "./assets/icons/icon-roa.png", "TapChamps | Higher ROAs", [150*2], ['webp'], 'false', 'no-select max-h-72 w-auto' %}
+                            </div>
+                        </div>
+                        <div class="md:pl-10">
+                            <h3>Higher ROAs</h3>
+                            <p>Target users precisely based on their behavior, profile, age and gender, operating system, Geo, device, games installed and played, time spent on each game…</p>
+                            <p>Auto and manual optimization tools to keep only the best performing users and generate lookalike audiences.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row text-center md:text-left">
+                        <div>
+                            <div class="w-[150px] m-auto mb-5">
+                                {% image "./assets/icons/icon-target.png", "TapChamps | Niche Targeting", [150*2], ['webp'], 'false', 'no-select max-h-72 w-auto' %}
+                            </div>
+                        </div>
+                        <div class="md:pl-10">
+                            <h3>Niche Targeting</h3>
+                            <p>Our mission is to bring you passionate players based on your game's type and data.</p>
+                            <p>Through our SDK, we analyze users' installed apps and app usage. Thanks to this data, we can build and optimize campaigns targeting your most valuable users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="w-full">
+            <div class="mx-0 md:mx-16 lg:mx-36 xl:mx-72 text-center">
+                <h2>Our advertisers</h2>
+            </div>
+            <div x-data="{swiper: null}" x-init="swiper = new Swiper($refs.testimonials, {navigation: {nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev'},autoplay: true,loop: true,slidesPerView: 1,spaceBetween: 0,breakpoints: {640: {slidesPerView: 2,spaceBetween: 0,},768: {slidesPerView: 2,spaceBetween: 0,},1024: {slidesPerView: 3,spaceBetween: 0,},1280: {slidesPerView: 4,spaceBetween: 0,},},});">
+                <div class="swiper w-full px-1 md:px-8" x-ref="testimonials">
+                    <div class="swiper-wrapper testimonials">
+                        <div class="swiper-slide testimonial">
+                            <div class="px-3">
+                            <div class="w-[192px] m-w-[180px] m-auto z-10">
+                                {% image "./assets/advertisers/adv-mobilityware-2.png", "TapChamps Advertiser | MobilityWare", [192*2], ['webp'], 'false', 'no-select max-h-16 w-auto m-auto' %}
+                            </div>
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">
+                                    <h3 class="mt-0 mx-auto mb-0">Mobilityware</h3>
+                                    <svg class="quote-icon" viewBox="0 0 49.869 39.244"><path d="M-12.9-147.963l9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789h-16.52v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1-12.9-147.963Zm26.059,0,9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789H-1.033v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1,13.16-147.963Z" transform="translate(27.092 147.963)" fill="currentColor" opacity="0.2"/></svg>
+                                <p class="ml-10">The ARPU looks very strong on Ad4game traffic</p>
+                                
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial">
+                            <div class="px-3">
+                            <div class="w-[192px] m-w-[180px] m-auto z-10">
+                                {% image "./assets/advertisers/adv-playtika.png", "TapChamps Advertiser | Playtika", [192*2], ['webp'], 'false', 'no-select max-h-16 w-auto m-auto' %}
+                            </div>
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">
+                                    <h3 class="mt-0 mx-auto mb-0">Playtika</h3>
+                                    <svg class="quote-icon" viewBox="0 0 49.869 39.244"><path d="M-12.9-147.963l9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789h-16.52v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1-12.9-147.963Zm26.059,0,9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789H-1.033v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1,13.16-147.963Z" transform="translate(27.092 147.963)" fill="currentColor" opacity="0.2"/></svg>
+                                <p class="ml-10">The results are very promising, higher than KPIs. We would love to keep increasing budgets as long as KPIs are met</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial">
+                            <div class="px-3">
+                            <div class="w-[192px] m-w-[180px] m-auto z-10">
+                                {% image "./assets/advertisers/adv-game-circus.png", "TapChamps Advertiser | Game Circus", [192*2], ['webp'], 'false', 'no-select max-h-16 w-auto m-auto' %}
+                            </div>
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">
+                                    <h3 class="mt-0 mx-auto mb-0">Game Circus</h3>
+                                    <svg class="quote-icon" viewBox="0 0 49.869 39.244"><path d="M-12.9-147.963l9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789h-16.52v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1-12.9-147.963Zm26.059,0,9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789H-1.033v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1,13.16-147.963Z" transform="translate(27.092 147.963)" fill="currentColor" opacity="0.2"/></svg>
+                                <p class="ml-10">We’re seeing no signs of fraud and everything looks clean as always</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial">
+                            <div class="px-3">
+                            <div class="w-[192px] m-w-[180px] m-auto z-10">
+                                {% image "./assets/advertisers/adv-gsn-games.png", "TapChamps Advertiser | GSN Games", [192*2], ['webp'], 'false', 'no-select max-h-16 w-auto m-auto' %}
+                            </div>
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">
+                                    <h3 class="mt-0 mx-auto mb-0">GSN Games</h3>
+                                    <svg class="quote-icon" viewBox="0 0 49.869 39.244"><path d="M-12.9-147.963l9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789h-16.52v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1-12.9-147.963Zm26.059,0,9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789H-1.033v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1,13.16-147.963Z" transform="translate(27.092 147.963)" fill="currentColor" opacity="0.2"/></svg>
+                                <p class="ml-10">We are keeping the great performance after our last scale.</p>
+                                
+                                </div>
+                            </div>
+                            </div>
+                        </div>       
+                        <div class="swiper-slide testimonial">
+                            <div class="px-3">
+                            <div class="w-[192px] m-w-[180px] m-auto z-10">
+                                {% image "./assets/advertisers/adv-appquantum.png", "TapChamps Advertiser | AppQuantum", [192*2], ['webp'], 'false', 'no-select max-h-16 w-auto m-auto' %}
+                            </div>
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">
+                                    <h3 class="mt-0 mx-auto mb-0">AppQuantum</h3>
+                                    <svg class="quote-icon" viewBox="0 0 49.869 39.244"><path d="M-12.9-147.963l9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789h-16.52v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1-12.9-147.963Zm26.059,0,9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789H-1.033v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1,13.16-147.963Z" transform="translate(27.092 147.963)" fill="currentColor" opacity="0.2"/></svg>
+                                <p class="ml-10">Thanks to the TapChamps teams for high-quality traffic, proactivity and focus on results - I believe in our growth and further cooperation!</p>
+                                
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonial">
+                            <div class="px-3">
+                            <div class="w-[192px] m-w-[180px] m-auto z-10">
+                                {% image "./assets/advertisers/adv-mad-brain-games.png", "TapChamps Advertiser | Mad Brain Games", [192*2], ['webp'], 'false', 'no-select max-h-16 w-auto m-auto' %}
+                            </div>
+                            <div class="testimonial-box">
+                                <div class="testimonial-text">
+                                    <h3 class="mt-0 mx-auto mb-0">Mad Brain<br>Games</h3>
+                                    <svg class="quote-icon" viewBox="0 0 49.869 39.244"><path d="M-12.9-147.963l9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789h-16.52v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1-12.9-147.963Zm26.059,0,9.617,5.972a39.005,39.005,0,0,0-7.29,21.483v11.789H-1.033v-10.7a36.033,36.033,0,0,1,4.072-15.55A37.45,37.45,0,0,1,13.16-147.963Z" transform="translate(27.092 147.963)" fill="currentColor" opacity="0.2"/></svg>
+                                <p class="ml-10">Honestly, we are happy that we are getting high quality traffic from TapChamps and we are looking forward to more of it!</p>
+                                
+                                </div>
+                            </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="swiper-button-next" @click="swiper.slideNext()"></div>
+                    <div class="swiper-button-prev" @click="swiper.slidePrev()"></div>
+                </div>
+            </div>
+            <div x-data="{swiper2: null}" x-init="swiper2 = new Swiper($refs.advertisers, {speed: 400,autoplay: true,loop: true,slidesPerView: 3,spaceBetween: 25,breakpoints: {640: {slidesPerView: 3,spaceBetween: 25,},768: {slidesPerView: 4,spaceBetween: 50,},1024: {slidesPerView: 4,spaceBetween: 50,},1280: {slidesPerView: 5,spaceBetween: 50,},},});">
+                    <div class="swiper" x-ref="advertisers">
+                        <div class="swiper-wrapper">
+                            <div class="w-[170px] m-auto z-10 swiper-slide">
+                                {% image "./assets/advertisers/adv-plarium.png", "TapChamps Advertiser | Plarium", [170*2], ['webp'], 'false', 'no-select m-auto' %}
+                            </div>
+                            <div class="w-[170px] m-auto z-10 swiper-slide">
+                                {% image "./assets/advertisers/adv-tapnation.png", "TapChamps Advertiser | TapNation", [170*2], ['webp'], 'false', 'no-select m-auto' %}
+                            </div>
+                            <div class="w-[170px] m-auto z-10 swiper-slide">
+                                {% image "./assets/advertisers/adv-zimad.png", "TapChamps Advertiser | ZiMad", [170*2], ['webp'], 'false', 'no-select m-auto' %}
+                            </div>
+                            <div class="w-[170px] m-auto z-10 swiper-slide">
+                                {% image "./assets/advertisers/adv-funplus.png", "TapChamps Advertiser | FunPlus", [170*2], ['webp'], 'false', 'no-select m-auto' %}
+                            </div>
+                            <div class="w-[170px] m-auto z-10 swiper-slide">
+                                {% image "./assets/advertisers/adv-huuuge.png", "TapChamps Advertiser | Huuuge", [170*2], ['webp'], 'false', 'no-select m-auto' %}
+                            </div>
+                            <div class="w-[170px] m-auto z-10 swiper-slide">
+                                {% image "./assets/advertisers/adv-applovin.png", "TapChamps Advertiser | AppLovin", [170*2], ['webp'], 'false', 'no-select m-auto' %}
+                            </div>
+                            <div class="w-[170px] m-auto z-10 swiper-slide">
+                                {% image "./assets/advertisers/adv-mobilityware.png", "TapChamps Advertiser | MobilityWare", [170*2], ['webp'], 'false', 'no-select m-auto' %}
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="w-full">
+            <div class="mx-0 md:mx-16 lg:mx-36 xl:mx-72 text-center">
+                <h2>Case Studies</h2>
+                <small>Last updated: 2024</small>
+            </div>
+            <div x-data="{swiper3: null}" x-init="swiper3 = new Swiper($refs.cases, screen.width > 500 ? {slidesPerView:1,grabCursor:true,effect:'cards',cardsEffect:{slideShadows:false,},} : {slidesPerView: 1,});">
+                <div class="swiper" x-ref="cases">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div x-data="gameData('bubbleShooterPop')" class="chart-slide relative">
+                                <span class="bg-slide" x-html="logo"></span>
+                                <div class="slide-title">
+                                    <div class="flex flex-col justify-center items-end dark:text-bluer">
+                                        <div class="flex gap-2"><span>Advertiser:</span><span class="capitalize font-bold text-ellipsis max-w-[150px] whitespace-nowrap overflow-hidden" x-text="advertiser"></span></div>
+                                        <div class="flex gap-2 capitalize italic opacity-70"><span>Category:</span><span x-text="category"></span></div>
+                                    </div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden slide-icon-color-spill" x-html="logo"></div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden" x-html="logo"></div>
+                                </div>
+                                <span class="bg-slide bg-slide-radial" x-text="name"></span>
+                                <div x-ref="bubbleShooterPop" class="rounded-lg bg-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div x-data="gameData('mgmSlotsLive')" class="chart-slide relative">
+                                <span class="bg-slide" x-html="logo"></span>
+                                <div class="slide-title">
+                                    <div class="flex flex-col justify-center items-end dark:text-bluer">
+                                        <div class="flex gap-2"><span>Advertiser:</span><span class="capitalize font-bold text-ellipsis max-w-[150px] whitespace-nowrap overflow-hidden" x-text="advertiser"></span></div>
+                                        <div class="flex gap-2 capitalize italic opacity-70"><span>Category:</span><span x-text="category"></span></div>
+                                    </div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden slide-icon-color-spill" x-html="logo"></div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden" x-html="logo"></div>
+                                </div>
+                                <span class="bg-slide bg-slide-radial" x-text="name"></span>
+                                <div x-ref="mgmSlotsLive" class="rounded-lg bg-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div x-data="gameData('bingoBlitz')" class="chart-slide relative">
+                                <span class="bg-slide" x-html="logo"></span>
+                                <div class="slide-title">
+                                    <div class="flex flex-col justify-center items-end dark:text-bluer">
+                                        <div class="flex gap-2"><span>Advertiser:</span><span class="capitalize font-bold text-ellipsis max-w-[150px] whitespace-nowrap overflow-hidden" x-text="advertiser"></span></div>
+                                        <div class="flex gap-2 capitalize italic opacity-70"><span>Category:</span><span x-text="category"></span></div>
+                                    </div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden slide-icon-color-spill" x-html="logo"></div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden" x-html="logo"></div>
+                                </div>
+                                <span class="bg-slide bg-slide-radial" x-text="name"></span>
+                                <div x-ref="bingoBlitz" class="rounded-lg bg-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div x-data="gameData('dominoes')" class="chart-slide relative">
+                                <span class="bg-slide" x-html="logo"></span>
+                                <div class="slide-title">
+                                    <div class="flex flex-col justify-center items-end dark:text-bluer">
+                                        <div class="flex gap-2"><span>Advertiser:</span><span class="capitalize font-bold text-ellipsis max-w-[150px] whitespace-nowrap overflow-hidden" x-text="advertiser"></span></div>
+                                        <div class="flex gap-2 capitalize italic opacity-70"><span>Category:</span><span x-text="category"></span></div>
+                                    </div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden slide-icon-color-spill" x-html="logo"></div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden" x-html="logo"></div>
+                                </div>
+                                <span class="bg-slide bg-slide-radial" x-text="name"></span>
+                                <div x-ref="dominoes" class="rounded-lg bg-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div x-data="gameData('ginRummy')" class="chart-slide relative">
+                                <span class="bg-slide" x-html="logo"></span>
+                                <div class="slide-title">
+                                    <div class="flex flex-col justify-center items-end dark:text-bluer">
+                                        <div class="flex gap-2"><span>Advertiser:</span><span class="capitalize font-bold text-ellipsis max-w-[150px] whitespace-nowrap overflow-hidden" x-text="advertiser"></span></div>
+                                        <div class="flex gap-2 capitalize italic opacity-70"><span>Category:</span><span x-text="category"></span></div>
+                                    </div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden slide-icon-color-spill" x-html="logo"></div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden" x-html="logo"></div>
+                                </div>
+                                <span class="bg-slide bg-slide-radial" x-text="name"></span>
+                                <div x-ref="ginRummy" class="rounded-lg bg-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div x-data="gameData('bingoBash')" class="chart-slide relative">
+                                <span class="bg-slide" x-html="logo"></span>
+                                <div class="slide-title">
+                                    <div class="flex flex-col justify-center items-end dark:text-bluer">
+                                        <div class="flex gap-2"><span>Advertiser:</span><span class="capitalize font-bold text-ellipsis max-w-[150px] whitespace-nowrap overflow-hidden" x-text="advertiser"></span></div>
+                                        <div class="flex gap-2 capitalize italic opacity-70"><span>Category:</span><span x-text="category"></span></div>
+                                    </div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden slide-icon-color-spill" x-html="logo"></div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden" x-html="logo"></div>
+                                </div>
+                                <span class="bg-slide bg-slide-radial" x-text="name"></span>
+                                <div x-ref="bingoBash" class="rounded-lg bg-white"></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div x-data="gameData('tripleTile')" class="chart-slide relative">
+                                <span class="bg-slide" x-html="logo"></span>
+                                <div class="slide-title">
+                                    <div class="flex flex-col justify-center items-end dark:text-bluer">
+                                        <div class="flex gap-2"><span>Advertiser:</span><span class="capitalize font-bold text-ellipsis max-w-[150px] whitespace-nowrap overflow-hidden" x-text="advertiser"></span></div>
+                                        <div class="flex gap-2 capitalize italic opacity-70"><span>Category:</span><span x-text="category"></span></div>
+                                    </div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden slide-icon-color-spill" x-html="logo"></div>
+                                    <div class="w-[50px] rounded-lg overflow-hidden" x-html="logo"></div>
+                                </div>
+                                <span class="bg-slide bg-slide-radial" x-text="name"></span>
+                                <div x-ref="tripleTile" class="rounded-lg bg-white"></div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="swiper-button-next" x-ref="nextChart" @click="swiper3.slideNext()"></div>
+                    <div class="swiper-button-prev" x-ref="prevChart" @click="swiper3.slidePrev()"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="w-full">
+            <div class="mx-0 md:mx-16 lg:mx-36 xl:mx-72 text-center">
+                <h2>Featured Games</h2>
+            </div>
+            <div class="flex gap-y-10 flex-wrap justify-between content-between mt-24">
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-triple-tile.png", "TapChamps | Triple Tile", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Triple Tile</h3>
+                        <p class="m-0 text-sm sm:text-base">Casual</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-dice-merge.png", "TapChamps | Dice Merge", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Dice Merge</h3>
+                        <p class="m-0 text-sm sm:text-base">Puzzle</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-bingo-blitz.png", "TapChamps | Bingo Blitz", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Bingo Blitz</h3>
+                        <p class="m-0 text-sm sm:text-base">Casino</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-piggygo.png", "TapChamps | PiggyGo", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">PiggyGo</h3>
+                        <p class="m-0 text-sm sm:text-base">Casino</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-bingo-bash.png", "TapChamps | Bingo Bash", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Bingo Bash</h3>
+                        <p class="m-0 text-sm sm:text-base">Casino</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-coin-dozer.png", "TapChamps | Coin Dozer", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Coin Dozer</h3>
+                        <p class="m-0 text-sm sm:text-base">Casual</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-traffic-puzzle.png", "TapChamps | Traffic Puzzle", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Traffic Puzzle</h3>
+                        <p class="m-0 text-sm sm:text-base">Puzzle</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-bricks-n-balls.png", "TapChamps | Bricks N Balls", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Bricks N Balls</h3>
+                        <p class="m-0 text-sm sm:text-base">Puzzle</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-makeover-merge.png", "TapChamps | Makeover Merge", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Makeover Merge</h3>
+                        <p class="m-0 text-sm sm:text-base">Puzzle, Merge</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-dice-dreams.png", "TapChamps | Dice Dreams", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Dice Dreams</h3>
+                        <p class="m-0 text-sm sm:text-base">Board</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-cooking-madness.png", "TapChamps | Cooking Madness", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Cooking Madness</h3>
+                        <p class="m-0 text-sm sm:text-base">Simulation, Casual</p>
+                    </div>
+                </div>
+                <div class="w-1/3 md:w-1/4">
+                    <div class="flex flex-col text-center">
+                        <div class="w-[70px] md:w-[140px] mx-auto">
+                            {% image "./assets/games/featured-game-rise-of-cultures.png", "TapChamps | Rise of Cultures", [140*2], ['webp'], 'true', 'rounded-[20%]' %}
+                        </div>
+                        <h3 class="m-0 mt-3">Rise of Cultures</h3>
+                        <p class="m-0 text-sm sm:text-base">Strategy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

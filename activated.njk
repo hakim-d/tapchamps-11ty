@@ -1,0 +1,48 @@
+---
+description: "Your email has been verified and your account is now active."
+---
+{% extends "_includes/default.njk" %}
+{% block title %}TapChamps | Email verified{% endblock %}
+{% block content %}
+<header>
+    <div class="section">
+        {% include "navigation.njk" %}
+        <div class="max-w-xl mx-auto lg:mx-0 lg:mr-auto text-center sm:text-justify my-auto bg-beige sm:bg-opacity-0 text-blue dark:sm:text-beige p-12 sm:p-0 rounded-3xl">
+            <h2 class="mb-12">✅ Activated</h2>
+            <h3>Thank you!</h3>
+            <h3 class="mb-0">Your email has been verified and your account is now active.</h3>
+        </div>
+        <div class="hidden lg:block fixed z-0 right-32 h-screen">
+            <div class="flex flex-col justify-center items-center absolute right-0 m-auto bottom-0">
+                <span class="w-full h-screen rounded-full bg-gradient-to-t from-orange to-blue dark:from-beige dark:to-beiger absolute aspect-square rotate-45 gradient-bg opacity-0"></span>
+                <div class="gift-cards">
+                    <div class="w-[100px] sm:w-[100px] md:w-[140px] lg:w-[160px] translate-x-1 md:translate-x-0 translate-y-3 md:translate-y-8 z-20">
+                        {% image "./assets/card-amazon.png", "TapChamps Gift Card Amazon", [160*2], ['webp'], 'false', 'no-select opacity-0' %}
+                    </div>
+                    <div class="w-[100px] sm:w-[100px] md:w-[140px] lg:w-[160px] translate-x-2 md:translate-x-4 z-10">
+                        {% image "./assets/card-play-store.png", "TapChamps Gift Google Play Store", [160*2], ['webp'], 'false', 'no-select opacity-0' %}
+                    </div>
+                    <div class="w-[100px] sm:w-[100px] md:w-[140px] lg:w-[160px] translate-x-1 -translate-y-4 md:-translate-y-10 z-0">
+                        {% image "./assets/card-paypal.png", "TapChamps Gift Paypal", [160*2], ['webp'], 'false', 'no-select opacity-0' %}
+                    </div>
+                </div>
+                <div class="hidden lg:block lg:w-[220px] -left-36 top-1/2 z-40 absolute mascot opacity-0">
+                    {% image "./assets/mascot.png", "TapChamps Mascot", [220*2], ['webp'], 'false', 'no-select' %}
+                </div>
+                <div class="w-[200px] md:w-[250px] lg:w-[300px] xl:w-[375px] relative">
+                    {% image "./assets/mobile-app.png", "TapChamps Mobile App", [375*2], ['webp'], 'false', 'no-select mobile-app opacity-0' %}
+                </div>
+                <div class="opacity-0 md:w-[150px] lg:w-[200px] absolute play-store-button">
+                    <a href="{{ settings.playStoreLink }}" target="_blank">
+                        {% image "./assets/play-store-btn.png", "TapChamps App play store button", [200*2], ['webp'], 'false', 'no-select [transform:rotateY(3deg)_rotateX(-20deg)_rotateZ(-1deg)_translateX(4px)_translateY(12px)]' %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block js %}
+    <script>window.subPageAnime = true;</script>
+{% endblock %}
