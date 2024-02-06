@@ -2,7 +2,7 @@
 
 TapChamps website is templated using [Eleventy](https://www.11ty.dev/)
 
-[<img src="https://a11ybadges.com/badge?logo=eleventy" width="120">](https://11ty.dev/) [<img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" width="120">](tailwindcss.com) [<img src="https://alpinejs.dev/alpine_long.svg" width="120">](https://alpinejs.dev/)
+[<img src="https://a11ybadges.com/badge?logo=eleventy" width="120">](https://11ty.dev/) [<img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" width="120">](https://tailwindcss.com) [<img src="https://alpinejs.dev/alpine_long.svg" width="120">](https://alpinejs.dev/)
 
 <img width="200" alt="Screenshot 2024-02-06 at 12 16 18" src="https://github.com/hakim-d/tapchamps-11ty/assets/7389034/5d6a8e73-0582-44c6-9590-89409a5efee1">
 
